@@ -83,8 +83,8 @@ This project explores how AI systems operate in environments with hidden informa
 
 ## Screenshots
 
-![AI Playing Texas Hold'em](screenshots/微信图片_20241030103018.jpg)
-![AI Decision Making](screenshots/微信图片_20241030112757.png)
+<img width="379" height="447" alt="微信图片_20241030112757" src="https://github.com/user-attachments/assets/ab9d42cf-6532-4939-b385-2c902b7b89a2" />
+<img width="1280" height="720" alt="微信图片_20241030103018" src="https://github.com/user-attachments/assets/1d0c4062-c266-462c-9daa-6d24c0d3910d" />
 
 ## 🚀 Inspired by Advanced Systems
 
