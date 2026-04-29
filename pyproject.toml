@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "texas-holdem-ai"
+version = "0.1.0"
+description = "Texas Hold'em AI System with Game Theory and Reinforcement Learning"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov"]
+lint = ["black", "isort", "flake8"]
+docs = ["sphinx", "sphinx-rtd-theme"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --cov=src --cov-report=html"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

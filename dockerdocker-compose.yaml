@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # 训练服务
+  trainer:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: texas-holdem-ai:latest
+    command: python3 scripts/train.py --iterations 10000 --save-path /models
+    volumes:
+      - ../models:/models
+      - ../logs:/logs
+    environment:
+      - CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # 评估服务
+  evaluator:
+    image: texas-holdem-ai:latest
+    command: python3 scripts/evaluate.py --model /models/latest.bin --num-games 1000
+    volumes:
+      - ../models:/models
+      - ../results:/results
+
+  # Jupyter Notebook（开发用）
+  jupyter:
+    image: texas-holdem-ai:latest
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../:/app
+      - ../models:/models
+    environment:
+      - JUPYTER_TOKEN=texas-holdem-ai
+
+  # TensorBoard（可视化）
+  tensorboard:
+    image: tensorflow/tensorflow:latest
+    command: tensorboard --logdir=/logs --host=0.0.0.0 --port=6006
+    ports:
+      - "6006:6006"
+    volumes:
+      - ../logs:/logs
+
+  # Redis（可选，用于分布式训练）
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
