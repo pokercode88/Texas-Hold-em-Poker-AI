@@ -81,10 +81,10 @@ This project explores how AI systems operate in environments with hidden informa
 - 强化学习实验  
 - 策略模拟  
 
+## Screenshots
 
-<img width="1743" height="1121" alt="92FFF1AD24528E37A48A3BDF3BF8DE13" src="https://github.com/user-attachments/assets/60f8056b-94c6-4189-b969-2a5c341015bb" /># Texas-Hold-em-Poker-Source-Code
-<img width="1743" height="1121" alt="92FFF1AD24528E37A48A3BDF3BF8DE13" src="https://github.com/user-attachments/assets/d117174c-6e22-4594-a80b-7362c8074067" />
-![640 (1)](https://github.com/user-attachments/assets/a6b958f7-2f06-434c-b542-ec71ea656bcf)---
+![AI Playing Texas Hold'em](screenshots/微信图片_20241030103018.jpg)
+![AI Decision Making](screenshots/微信图片_20241030112757.png)
 
 ## 🚀 Inspired by Advanced Systems
 
