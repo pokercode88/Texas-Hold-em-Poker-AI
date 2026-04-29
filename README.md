@@ -1,4 +1,4 @@
-# Poker AI Framework | 不完全信息博弈AI框架| 德州扑克 AI 机器人源码 | 可集成于 Unity/C++ | 支持难度调节
+# Poker AI Framework | 不完全信息博弈AI框架| 德州扑克 AI 机器人源码|德州AI源码
 
 A poker AI framework designed for imperfect-information games, focusing on decision-making, simulation, and reinforcement learning concepts.  
 一个面向不完全信息博弈的扑克AI框架，专注于决策建模、模拟训练与强化学习方法。
